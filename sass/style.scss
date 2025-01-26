@@ -1,0 +1,124 @@
+@use "utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --brand-color: #7ca2f4;
+  --dark-10: #121214;
+  --dark-20: #f3f7ff;
+  --white: #fff;
+}
+
+body {
+  font-family: "Archivo", serif;
+  display: grid;
+  align-content: center;
+  background-color: var(--white);
+  font-size: 1.6rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+
+  > .promotion {
+    width: 100%;
+    background-color: var(--dark-20);
+    text-align: center;
+    padding: 1.2rem 0 1.2rem 0;
+
+    @include utilities.desktop {
+      padding: 1.9rem 0 1.9rem 0;
+    }
+
+    > .promotion-text {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--dark-10);
+
+      @include utilities.tablet {
+        font-size: 1.6rem;
+      }
+
+      @include utilities.desktop {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  > .hero {
+    position: relative;
+    > .hero-image {
+      img {
+        object-fit: cover;
+        height: 35rem;
+        width: 100%;
+
+        @include utilities.desktop {
+          height: 40rem;
+        }
+      }
+    }
+
+    > .hero-content {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 9rem;
+      left: 2.4rem;
+      color: var(--white);
+
+      @include utilities.tablet {
+        width: 55.7rem;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @include utilities.desktop {
+        top: 30%;
+        left: 40%;
+        transform: translateX(-50%);
+      }
+
+      > .brand {
+        margin-bottom: 4rem;
+
+        > img {
+          @include utilities.desktop {
+            height: 4.8rem;
+          }
+        }
+      }
+
+      > .hero-title {
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin-bottom: 1.2rem;
+
+        @include utilities.desktop {
+          font-size: 3.2rem;
+        }
+      }
+      > .hero-text {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.25rem;
+
+        @include utilities.tablet {
+          font-size: 1.8rem;
+        }
+
+        @include utilities.desktop {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+}
