@@ -168,5 +168,65 @@ body {
     line-height: 3.3rem;
   }
 }
+.content-section > .items {
+  display: grid;
+  gap: 4rem;
+  width: 100%;
+  margin-bottom: 5.6rem;
+  max-width: 121.6rem;
+}
+@media (min-width: 768px) {
+  .content-section > .items {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: ". ." ". ." ". .";
+  }
+}
+@media (min-width: 1200px) {
+  .content-section > .items {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". . ." ". . .";
+  }
+}
+.content-section > .items > .item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+.content-section > .items > .item > :hover {
+  cursor: pointer;
+}
+.content-section > .items > .item > .item-image {
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-20);
+}
+.content-section > .items > .item > .item-name {
+  margin-top: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .content-section > .items > .item > .item-name {
+    font-size: 1.8rem;
+  }
+}
+.content-section > .items > .item > .item-type {
+  margin-top: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--brand-color);
+}
+.content-section > .items > .item > .item-price {
+  margin-top: 2.4rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
 
 /*# sourceMappingURL=style.css.map */
