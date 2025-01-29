@@ -200,10 +200,7 @@ body {
       flex-direction: column;
       align-self: center;
       justify-content: center;
-
-      > :hover {
-        cursor: pointer;
-      }
+      transition: all 0.3s;
 
       > .item-image {
         height: 20rem;
@@ -235,6 +232,11 @@ body {
         font-size: 2rem;
         font-weight: 500;
       }
+    }
+
+    .item:hover {
+      cursor: pointer;
+      scale: 1.1;
     }
   }
 }
